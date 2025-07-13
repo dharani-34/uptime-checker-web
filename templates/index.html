@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Uptime Checker</title>
+    <style>
+        body { font-family: Arial; text-align: center; margin-top: 50px; }
+        input, button { padding: 10px; font-size: 16px; }
+        .result { margin-top: 20px; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <h1>🌐 Website Uptime Checker</h1>
+    <form method="POST">
+        <input type="text" name="url" placeholder="Enter website URL (https://...)" required>
+        <button type="submit">Check</button>
+    </form>
+
+    {% if status %}
+    <div class="result">{{ status }}</div>
+    {% endif %}
+</body>
+</html>
